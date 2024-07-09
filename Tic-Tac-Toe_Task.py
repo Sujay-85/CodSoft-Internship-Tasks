@@ -109,7 +109,7 @@ def checkDraw():
 
 
 def playerMove():
-    position = int(input("Enter a position for 'O': "))
+    position = int(input(f"Enter a position for '{player}': "))
     insertLetter(player, position)
     return
 
@@ -160,5 +160,9 @@ def minimax(board, isMaximizing):
 
 
 while not checkWin():
-    compMove()
-    playerMove()
+    if toss == res:
+        playerMove()
+        compMove ( )
+    else:
+        compMove ( )
+        playerMove ( )
